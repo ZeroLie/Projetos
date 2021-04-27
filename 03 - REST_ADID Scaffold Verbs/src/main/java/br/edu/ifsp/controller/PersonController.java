@@ -20,8 +20,7 @@ public class PersonController {
 	@Autowired
 	private PersonServices services;
 	
-	
-	@RequestMapping(value = "/{id}", method = RequestMethod.GET,
+	@RequestMapping(method = RequestMethod.GET,
 			produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Person> findAll() {
 		return services.findAll();
